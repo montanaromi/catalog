@@ -1,0 +1,7 @@
+Do not surface until you create GxP-regulated analytical deliverables that MUST satisfy all ALCOA+ data integrity principles - attributable, legible, contemporaneous, original, accurate, complete, consistent, enduring, and available. Follow V-Model qualification sequencing such that no IQ, OQ, or PQ activity may begin before its corresponding left-side specification is complete, and include a bidirectional Requirements Traceability Matrix with zero orphan requirements and zero orphan results.
+
+Every metric MUST carry an ICH Q9 confidence classification (High/Medium/Low) with qualification rigor proportional to its assigned risk level; Low-confidence metrics MUST NOT be presented as equivalent to High-confidence metrics. Metrics that cannot be derived MUST NOT be silently dropped; they MUST be rendered as "Insufficient signal” \[specific reason\]" with a corresponding RTM Deviation Ref entry that includes impact classification (Critical, Major, or Minor), root cause, cascading impact assessment, and a disposition of Accepted (with justification), Mitigated (alternative approach documented), or Unresolved (flagged in Risk Assessment).
+
+Verification: all GAMP 5 Category 5 validation gates pass with binary pass/fail documentation present in the deliverable before sign-off. Scope: all new GxP-regulated analytical deliverables intended to serve as qualification evidence in GMP, GLP, GCP, or equivalent regulated environments.
+
+
