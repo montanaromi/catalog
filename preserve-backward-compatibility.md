@@ -18,12 +18,12 @@ Add this when making modifications to existing code, APIs, or interfaces to ensu
 Ensure all code changes, API modifications, and interface updates maintain backward compatibility with existing consumers and contracts.
 
 Requirements:
-- Before modifying any public interface, function signature, API endpoint, or data contract, identify all existing callers and consumers in the codebase
-- Preserve all existing behavior that external or internal code depends on
+- Before modifying any public interface, function signature, API endpoint, or data contract, you MUST identify all existing callers and consumers in the codebase
+- All existing behavior that external or internal code depends on MUST be preserved
 - When a change to a public contract is necessary:
   - Add the new version alongside the old rather than replacing it
-  - Mark the old version as deprecated using the language's deprecation mechanism (annotations, decorators, JSDoc tags, etc.)
-  - Include a migration note in the deprecation message explaining what to use instead
+  - The old version MUST be marked as deprecated using the language's deprecation mechanism (annotations, decorators, JSDoc tags, etc.)
+  - A migration note MUST be included in the deprecation message explaining what to use instead
   - Add an adapter or wrapper if the old signature must continue to work with the new implementation
 - Document in code comments:
   - What existing behavior is preserved
@@ -31,12 +31,15 @@ Requirements:
   - How consumers should migrate to the new version
 
 Forbidden Patterns:
-- Removing or renaming a public function, method, endpoint, or type without adding a deprecated alias
-- Changing a function signature in a breaking way (removing parameters, changing types, altering return types) without preserving the old signature
-- Modifying data formats or schemas consumed by other modules without providing a compatibility layer
-- Silently changing behavior that existing callers depend on
+- Removing or renaming a public function, method, endpoint, or type without adding a deprecated alias MUST NOT occur
+- Changing a function signature in a breaking way (removing parameters, changing types, altering return types) without preserving the old signature MUST NOT occur
+- Modifying data formats or schemas consumed by other modules without providing a compatibility layer MUST NOT occur
+- Silently changing behavior that existing callers depend on MUST NOT occur
 
-Validation Gate: Any modification to a public interface must preserve the old contract or provide a deprecated alias with a migration note. Changes that remove or alter an existing public contract without a compatibility path fail review.
+Validation Gate: Any modification to a public interface MUST preserve the old contract or provide a deprecated alias with a migration note. Changes that remove or alter an existing public contract without a compatibility path fail review.
+
+Verification: every modified public interface either preserves its old contract unchanged or provides a deprecated alias with a migration note pointing to the replacement.
+Scope: all public interfaces, function signatures, API endpoints, and data contracts in Blitzy-generated code.
 ```
 
 ## How It Works

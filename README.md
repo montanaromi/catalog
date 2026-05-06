@@ -55,7 +55,7 @@ Rules are embedded into Blitzy prompts via the `/z` skill (Section 6: RULES) and
 | `document-api-consumer-paths.md` | Documentation | API endpoint contract and data flow documentation |
 | `enforce-code-style-patterns.md` | Quality | Match existing codebase conventions |
 | `preserve-backward-compatibility.md` | Compatibility | Backward-compatible changes with deprecation paths |
-| `require-test-coverage.md` | Testing | Tests must invoke production code, not reimplement logic |
+| `require-test-coverage.md` | Testing | Test coverage contract — test double taxonomy (stubs, mocks, fakes), seed data, tiered coverage, environment parity |
 
 ### Prompts
 

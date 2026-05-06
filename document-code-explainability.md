@@ -4,4 +4,5 @@ Every non-obvious implementation decision MUST have an inline comment adjacent t
 
 For decisions significant enough to warrant a deliverable-level record, the report-driven decision log (see explainability.md) is the authoritative source — inline comments MAY summarize but SHOULD reference the decision log entry.
 
-Verification: every new or modified function has a docstring with purpose, parameters, and return values; every non-obvious implementation choice has an adjacent inline comment with at least one "why" category. Scope: all Blitzy code generation outputs producing executable application code.
+Verification: every new or modified function has a docstring with purpose, parameters, and return values; every non-obvious implementation choice has an adjacent inline comment with at least one "why" category.
+Scope: all Blitzy code generation outputs producing executable application code.

@@ -30,7 +30,10 @@ Forbidden Patterns:
 - Changing infrastructure or configuration without noting required deployment steps
 - Introducing a breaking change without documenting a migration path for existing consumers
 
-Validation Gate: Every modification to a public contract or schema must have an inline comment documenting the risk and mitigation. Changes to infrastructure or deployment configuration must include deployment step documentation. Generated code that modifies external-facing behavior without risk annotations fails review.
+Validation Gate: Every modification to a public contract or schema MUST have an inline comment documenting the risk and mitigation. Changes to infrastructure or deployment configuration MUST include deployment step documentation. Generated code that modifies external-facing behavior without risk annotations fails review.
+
+Verification: Every public API, schema, or infrastructure change has an inline risk-and-mitigation comment, and no forbidden pattern is present.
+Scope: Applies to all generated code that modifies public APIs, data schemas, infrastructure configuration, or external-facing contracts.
 ```
 
 ## How It Works

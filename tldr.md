@@ -83,4 +83,5 @@ Include the full set of slide-type classes (`slide-title`, `slide-divider`, `sli
 
 **Verification:**  
 The HTML file opens in a browser, renders all Mermaid diagrams and Lucide icons, contains 12–18 `<section>` elements, and every `<section>` contains at least one non-text visual element.
+Scope: Applies to all Blitzy deliverables that require an executive summary presentation.
 
