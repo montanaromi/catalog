@@ -18,11 +18,11 @@ Add this to ensure every API endpoint generated or modified includes clear docum
 When generating or modifying API endpoints, webhooks, or event handlers, document the consumer contract and data flow inline.
 
 Requirements:
-- Every new or modified public endpoint must include a docstring or comment block documenting: HTTP method/route, request parameters and body schema, response status codes and payload structure, and error response format
-- Every data transformation between request and response (validation, enrichment, filtering, mapping) must have an inline comment explaining what is transformed and why
-- Every side effect triggered by an endpoint (database writes, event emissions, external API calls, cache updates) must be documented in a comment at the call site
+- Every new or modified public endpoint MUST include a docstring or comment block documenting: HTTP method/route, request parameters and body schema, response status codes and payload structure, and error response format
+- Every data transformation between request and response (validation, enrichment, filtering, mapping) MUST have an inline comment explaining what is transformed and why
+- Every side effect triggered by an endpoint (database writes, event emissions, external API calls, cache updates) MUST be documented in a comment at the call site
 - When an endpoint is consumed by a known external system, note the consumer in a comment on the endpoint definition
-- Webhook and event handler registrations must document the expected payload schema and the source system
+- Webhook and event handler registrations MUST document the expected payload schema and the source system
 
 Forbidden Patterns:
 - Creating a public endpoint without documenting its request and response contract
@@ -31,7 +31,10 @@ Forbidden Patterns:
 - Changing an endpoint's response shape without noting the breaking change and affected consumers
 - Adding a webhook handler without documenting the expected payload format
 
-Validation Gate: Every new or modified public endpoint must have a documented contract (method, parameters, response codes, payload shape). Every data transformation and side effect must have an inline comment. Endpoints missing contract documentation fail review.
+Validation Gate: Every new or modified public endpoint MUST have a documented contract (method, parameters, response codes, payload shape). Every data transformation and side effect MUST have an inline comment. Endpoints missing contract documentation fail review.
+
+Verification: every new or modified public endpoint has a docstring with method, parameters, response codes, and payload shape; every data transformation and side effect has an inline comment.
+Scope: all API endpoints, webhooks, and event handlers in Blitzy-generated code.
 ```
 
 ## How It Works

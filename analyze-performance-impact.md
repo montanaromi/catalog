@@ -15,7 +15,7 @@ Add this when performance characteristics matter for scalability, user experienc
 **Description** — paste this into the rule description field on the platform:
 
 ```
-All generated code must consider performance implications and document them inline. Choose efficient implementations by default and annotate trade-offs.
+All generated code MUST consider performance implications and document them inline. Choose efficient implementations by default and annotate trade-offs.
 
 Requirements:
 - For every algorithm or data structure choice, add an inline comment stating time and space complexity in Big O notation
@@ -35,7 +35,10 @@ Forbidden Patterns:
 - Making synchronous blocking calls where async alternatives exist in the framework
 - Ignoring scalability when the code operates on user-controlled or growth-prone input sizes
 
-Validation Gate: Every algorithm and data structure choice must have an inline comment stating its complexity. Performance-critical code paths without complexity annotations fail review. Trade-off decisions without documented justification fail review.
+Validation Gate: Every algorithm and data structure choice MUST have an inline comment stating its complexity. Performance-critical code paths without complexity annotations fail review. Trade-off decisions without documented justification fail review.
+
+Verification: Every algorithm and data structure choice has an inline Big O complexity comment, and no forbidden pattern is present.
+Scope: Applies to all generated code that includes algorithmic logic, data structure choices, or external service calls.
 ```
 
 ## How It Works
